@@ -111,8 +111,10 @@ export const getUsersByUserName = async (
   userName: string
 ): Promise<SearchedUser[]> => {
   const [rows] = await pool.query<RowDataPacket[]>(
-    `SELECT user_id FROM user WHERE user_name LIKE ?`,
-    [`%${userName}%`]
+    // `SELECT user_id FROM user WHERE user_name LIKE ?`,
+    // [`%${userName}%`]
+    `SELECT user_id FROM user WHERE MATCH(user_name) AGAINST(? IN BOOLEAN MODE)`,
+    [userName]
   );
   const userIds: string[] = rows.map((row) => row.user_id);
 
@@ -143,8 +145,7 @@ export const getUsersByMail = async (mail: string): Promise<SearchedUser[]> => {
     const regex = new RegExp(`^[${allowedChars}]+$`);
     return regex.test(keyword);
   };
-  if (!isValidEmailChar(mail))
-    return [];
+  if (!isValidEmailChar(mail)) return [];
   const [rows] = await pool.query<RowDataPacket[]>(
     `SELECT user_id FROM user WHERE mail LIKE ?`,
     [`%${mail}%`]
