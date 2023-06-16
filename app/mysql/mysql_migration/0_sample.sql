@@ -7,3 +7,4 @@ CREATE INDEX dept_role_member_idx1 ON department_role_member (user_id);
 
 CREATE INDEX match_group_member_idx0 ON match_group_member (user_id);
 
+CREATE INDEX goal_idx0 ON user (goal);
