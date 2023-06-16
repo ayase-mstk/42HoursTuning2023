@@ -242,8 +242,10 @@ export const getUsersBySkillName = async (
 
 export const getUsersByGoal = async (goal: string): Promise<SearchedUser[]> => {
   const [rows] = await pool.query<RowDataPacket[]>(
-    `SELECT user_id FROM user WHERE goal LIKE ?`,
-    [`%${goal}%`]
+    // `SELECT user_id FROM user WHERE goal LIKE ?`,
+    // [`%${goal}%`]
+    `SELECT user_id FROM user WHERE MATCH(goal) AGAINST(? IN BOOLEAN MODE)`,
+    [goal]
   );
   const userIds: string[] = rows.map((row) => row.user_id);
 
@@ -256,8 +258,8 @@ export const getUserForFilter = async (
   let userRows: RowDataPacket[];
   if (!userId) {
     [userRows] = await pool.query<RowDataPacket[]>(
-      // "SELECT user_id, user_name, office_id, user_icon_id FROM user ORDER BY RAND() LIMIT 1"
-      "SELECT user_id, user_name, office_id, user_icon_id FROM user LIMIT 1"
+      "SELECT user_id, user_name, office_id, user_icon_id FROM user ORDER BY RAND() LIMIT 1"
+      // "SELECT user_id, user_name, office_id, user_icon_id FROM user LIMIT 1"
       // "SELECT user_id, user_name, office_id, user_icon_id FROM user WHERE user_id >= (SELECT FLOOR(RAND() * (SELECT MAX(user_id) FROM user))) ORDER BY user_id LIMIT 1"
     );
   } else {
