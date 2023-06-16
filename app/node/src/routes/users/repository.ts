@@ -120,6 +120,14 @@ export const getUsersByUserName = async (
 };
 
 export const getUsersByKana = async (kana: string): Promise<SearchedUser[]> => {
+  const isKana = (kana: string): boolean => {
+    const kanaRegex = /^[\u3040-\u3096\u30A0-\u30FF\u31F0-\u31FFー　]*$/;
+    return kanaRegex.test(kana);
+  };
+
+  if (!isKana(kana)) {
+    return [];
+  }
   const [rows] = await pool.query<RowDataPacket[]>(
     `SELECT user_id FROM user WHERE kana LIKE ?`,
     [`%${kana}%`]
