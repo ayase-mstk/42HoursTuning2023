@@ -1,5 +1,5 @@
 import express from "express";
-import { execSync } from "child_process";
+// import { execSync } from "child_process";
 import { v4 as uuidv4 } from "uuid";
 import { getUserIdByMailAndPassword } from "../users/repository";
 import {
@@ -9,7 +9,6 @@ import {
   deleteSessions,
 } from "./repository";
 import crypto from "crypto";
-
 
 export const sessionRouter = express.Router();
 
@@ -36,10 +35,9 @@ sessionRouter.post(
 
     const { mail, password }: { mail: string; password: string } = req.body;
 
-
-    const sha256 = crypto.createHash('sha256');
+    const sha256 = crypto.createHash("sha256");
     sha256.update(password);
-    const hashPassword = sha256.digest('hex');
+    const hashPassword = sha256.digest("hex");
 
     // const hashPassword = execSync(
     //   `echo -n ${password} | shasum -a 256 | awk '{printf $1}'`,
