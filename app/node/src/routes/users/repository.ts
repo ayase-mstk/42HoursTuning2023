@@ -138,6 +138,13 @@ export const getUsersByKana = async (kana: string): Promise<SearchedUser[]> => {
 };
 
 export const getUsersByMail = async (mail: string): Promise<SearchedUser[]> => {
+  const isValidEmailChar = (keyword: string): boolean => {
+    const allowedChars = "popy0123456789@example.com";
+    const regex = new RegExp(`^[${allowedChars}]+$`);
+    return regex.test(keyword);
+  };
+  if (!isValidEmailChar(mail))
+    return [];
   const [rows] = await pool.query<RowDataPacket[]>(
     `SELECT user_id FROM user WHERE mail LIKE ?`,
     [`%${mail}%`]
