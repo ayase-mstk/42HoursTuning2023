@@ -8,6 +8,8 @@ import {
   getSessionBySessionId,
   deleteSessions,
 } from "./repository";
+import crypto from "crypto";
+
 
 export const sessionRouter = express.Router();
 
@@ -34,10 +36,15 @@ sessionRouter.post(
 
     const { mail, password }: { mail: string; password: string } = req.body;
 
-    const hashPassword = execSync(
-      `echo -n ${password} | shasum -a 256 | awk '{printf $1}'`,
-      { shell: "/bin/bash" }
-    ).toString();
+
+    const sha256 = crypto.createHash('sha256');
+    sha256.update(password);
+    const hashPassword = sha256.digest('hex');
+
+    // const hashPassword = execSync(
+    //   `echo -n ${password} | shasum -a 256 | awk '{printf $1}'`,
+    //   { shell: "/bin/bash" }
+    // ).toString();
 
     try {
       const userId = await getUserIdByMailAndPassword(mail, hashPassword);
