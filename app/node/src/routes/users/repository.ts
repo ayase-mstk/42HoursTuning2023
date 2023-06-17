@@ -258,10 +258,10 @@ export const getUserForFilter = async (
 ): Promise<UserForFilter> => {
   let userRows: RowDataPacket[];
   if (!userId) {
+    const randomEmail = `popy${Math.floor(Math.random() * 300001)}@example.com`;
     [userRows] = await pool.query<RowDataPacket[]>(
-      "SELECT user_id, user_name, office_id, user_icon_id FROM user ORDER BY RAND() LIMIT 1"
-      // "SELECT user_id, user_name, office_id, user_icon_id FROM user LIMIT 1"
-      // "SELECT user_id, user_name, office_id, user_icon_id FROM user WHERE user_id >= (SELECT FLOOR(RAND() * (SELECT MAX(user_id) FROM user))) ORDER BY user_id LIMIT 1"
+      `SELECT user_id, user_name, office_id, user_icon_id FROM user WHERE mail = ?`,
+      [randomEmail]
     );
   } else {
     [userRows] = await pool.query<RowDataPacket[]>(
