@@ -13,7 +13,7 @@ CREATE INDEX match_groupidx0 ON match_group (match_group_name);
 
 CREATE INDEX sessionidx0 ON `session` (linked_user_id);
 
--- create table user_count (
---     count int not null
--- );
--- insert into user_count (count) values ((select count(user_id) from user));
+create table user_count (
+    cnt int not null
+);
+insert into user_count (count) values ((select count(user_id) from user));
