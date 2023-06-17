@@ -16,4 +16,4 @@ CREATE INDEX sessionidx0 ON `session` (linked_user_id);
 create table user_count (
     cnt int not null
 );
-insert into user_count (count) values ((select count(user_id) from user));
+insert into user_count (cnt) values ((select count(user_id) from user));
