@@ -17,3 +17,5 @@ create table user_count (
     cnt int not null
 );
 insert into user_count (cnt) values ((select count(user_id) from user));
+
+create index skill_idx ON skill (skill_name);
