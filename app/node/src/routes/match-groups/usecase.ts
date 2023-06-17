@@ -10,7 +10,7 @@ import {
   hasSkillNameRecord,
   insertMatchGroup,
 } from "./repository";
-import { getUserForFilter, getUsersForFilterV2 } from "../users/repository";
+import { getUserForFilter } from "../users/repository";
 
 export const checkSkillsRegistered = async (
   skillNames: string[]

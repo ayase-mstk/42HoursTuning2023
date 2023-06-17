@@ -4,7 +4,7 @@ import {
   SearchedUser,
   User,
   UserForFilter,
-  MatchGroupConfig,
+  // MatchGroupConfig,
 } from "../../model/types";
 import {
   convertToSearchedUser,
@@ -301,68 +301,68 @@ export const getUserForFilter = async (
   return convertToUserForFilter(user);
 };
 
-export const getUsersForFilterV2 = async (
-  matchGroupConfig: MatchGroupConfig
-): Promise<UserForFilter[]> => {
-  // let userRows: RowDataPacket[];
+export const getUsersForFilterV2 =
+  async (): // matchGroupConfig: MatchGroupConfig
+  Promise<UserForFilter[]> => {
+    // let userRows: RowDataPacket[];
 
-  // const [userIdsRow] = await pool.query<RowDataPacket[]>(
-  //   `SELECT
-  //     user
-  //   `
+    // const [userIdsRow] = await pool.query<RowDataPacket[]>(
+    //   `SELECT
+    //     user
+    //   `
 
-  // const [userIdsByDepartmentFilterRows] = await pool.query<RowDataPacket[]>(
-  //   `SELECT
-  //     drm.user_id as user_id
-  //   FROM department as d
-  //     INNER JOIN department_role_member as drm ON d.department_id = drm.department_id
-  //   WHERE d.department_name = ?`
-  // );
+    // const [userIdsByDepartmentFilterRows] = await pool.query<RowDataPacket[]>(
+    //   `SELECT
+    //     drm.user_id as user_id
+    //   FROM department as d
+    //     INNER JOIN department_role_member as drm ON d.department_id = drm.department_id
+    //   WHERE d.department_name = ?`
+    // );
 
-  // const [userIdsBySkillFilterRows] = await pool.query<RowDataPacket[]>(
-  //   `SELECT
-  //     sm.user_id as user_id
-  //   FROM skill AS s
-  //     INNER JOIN skill_member AS sm ON s.skill_id = sm.skill_id
-  //   WHERE s.skill_name IN (?)`,
-  //   [matchGroupConfig.skillFilter]
-  // );
+    // const [userIdsBySkillFilterRows] = await pool.query<RowDataPacket[]>(
+    //   `SELECT
+    //     sm.user_id as user_id
+    //   FROM skill AS s
+    //     INNER JOIN skill_member AS sm ON s.skill_id = sm.skill_id
+    //   WHERE s.skill_name IN (?)`,
+    //   [matchGroupConfig.skillFilter]
+    // );
 
-  // if (!userId) {
-  //   const randomEmail = `popy${Math.floor(Math.random() * 300001)}@example.com`;
-  //   [userRows] = await pool.query<RowDataPacket[]>(
-  //     `SELECT user_id, user_name, office_id, user_icon_id FROM user WHERE mail = ?`,
-  //     [randomEmail]
-  //   );
-  // } else {
-  //   [userRows] = await pool.query<RowDataPacket[]>(
-  //     "SELECT user_id, user_name, office_id, user_icon_id FROM user WHERE user_id = ?",
-  //     [userId]
-  //   );
-  // }
-  // const user = userRows[0];
+    // if (!userId) {
+    //   const randomEmail = `popy${Math.floor(Math.random() * 300001)}@example.com`;
+    //   [userRows] = await pool.query<RowDataPacket[]>(
+    //     `SELECT user_id, user_name, office_id, user_icon_id FROM user WHERE mail = ?`,
+    //     [randomEmail]
+    //   );
+    // } else {
+    //   [userRows] = await pool.query<RowDataPacket[]>(
+    //     "SELECT user_id, user_name, office_id, user_icon_id FROM user WHERE user_id = ?",
+    //     [userId]
+    //   );
+    // }
+    // const user = userRows[0];
 
-  // const [officeNameRow] = await pool.query<RowDataPacket[]>(
-  //   `SELECT office_name FROM office WHERE office_id = ?`,
-  //   [user.office_id]
-  // );
-  // const [fileNameRow] = await pool.query<RowDataPacket[]>(
-  //   `SELECT file_name FROM file WHERE file_id = ?`,
-  //   [user.user_icon_id]
-  // );
-  // const [departmentNameRow] = await pool.query<RowDataPacket[]>(
-  //   `SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = ? AND belong = true)`,
-  //   [user.user_id]
-  // );
-  // const [skillNameRows] = await pool.query<RowDataPacket[]>(
-  //   `SELECT skill_name FROM skill WHERE skill_id IN (SELECT skill_id FROM skill_member WHERE user_id = ?)`,
-  //   [user.user_id]
-  // );
+    // const [officeNameRow] = await pool.query<RowDataPacket[]>(
+    //   `SELECT office_name FROM office WHERE office_id = ?`,
+    //   [user.office_id]
+    // );
+    // const [fileNameRow] = await pool.query<RowDataPacket[]>(
+    //   `SELECT file_name FROM file WHERE file_id = ?`,
+    //   [user.user_icon_id]
+    // );
+    // const [departmentNameRow] = await pool.query<RowDataPacket[]>(
+    //   `SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = ? AND belong = true)`,
+    //   [user.user_id]
+    // );
+    // const [skillNameRows] = await pool.query<RowDataPacket[]>(
+    //   `SELECT skill_name FROM skill WHERE skill_id IN (SELECT skill_id FROM skill_member WHERE user_id = ?)`,
+    //   [user.user_id]
+    // );
 
-  // user.office_name = officeNameRow[0].office_name;
-  // user.file_name = fileNameRow[0].file_name;
-  // user.department_name = departmentNameRow[0].department_name;
-  // user.skill_names = skillNameRows.map((row) => row.skill_name);
+    // user.office_name = officeNameRow[0].office_name;
+    // user.file_name = fileNameRow[0].file_name;
+    // user.department_name = departmentNameRow[0].department_name;
+    // user.skill_names = skillNameRows.map((row) => row.skill_name);
 
-  return [];
-};
+    return [];
+  };
