@@ -1,0 +1,44 @@
+/usr/sbin/mysqld, Version: 8.0.33 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2023-06-16T14:42:41.445397Z
+# User@Host: mysql[mysql] @  [172.24.0.4]  Id:    18
+# Query_time: 6.847718  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 3444678
+use app;
+SET timestamp=1686926554;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T14:42:45.659874Z
+# User@Host: mysql[mysql] @  [172.24.0.4]  Id:    17
+# Query_time: 11.263481  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686926554;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T14:43:10.785300Z
+# User@Host: mysql[mysql] @  [172.24.0.4]  Id:    18
+# Query_time: 8.694966  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686926582;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T14:43:10.799830Z
+# User@Host: mysql[mysql] @  [172.24.0.4]  Id:    20
+# Query_time: 8.711202  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686926582;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T14:43:16.259494Z
+# User@Host: mysql[mysql] @  [172.24.0.4]  Id:    21
+# Query_time: 5.312583  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686926590;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T14:43:42.934457Z
+# User@Host: mysql[mysql] @  [172.24.0.4]  Id:    25
+# Query_time: 6.790213  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686926616;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T14:43:50.220427Z
+# User@Host: mysql[mysql] @  [172.24.0.4]  Id:    24
+# Query_time: 5.993696  Lock_time: 0.000002 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686926624;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T14:43:50.230684Z
+# User@Host: mysql[mysql] @  [172.24.0.4]  Id:    21
+# Query_time: 6.037337  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686926624;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);

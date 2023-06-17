@@ -1,0 +1,825 @@
+
+/usr/sbin/mysqld, Version: 8.0.33 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2023-06-16T13:25:33.343995Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 7.590741  Lock_time: 0.000001 Rows_sent: 50  Rows_examined: 3444677
+use app;
+SET timestamp=1686921925;
+SELECT user_id FROM department_role_member WHERE role_id IN ('d035ae56-81cf-448d-9a1d-63445792430b') AND belong = true;
+# Time: 2023-06-16T13:26:27.297104Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 3.341601  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686921983;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:28:22.524764Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 21.786745  Lock_time: 0.000001 Rows_sent: 18  Rows_examined: 6003292
+SET timestamp=1686922080;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:28:25.975899Z
+# User@Host: mysql[mysql] @  [172.22.0.1]  Id:    12
+# Query_time: 3.346412  Lock_time: 0.000002 Rows_sent: 19  Rows_examined: 6003294
+SET timestamp=1686922102;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:29:44.167938Z
+# User@Host: mysql[mysql] @  [172.22.0.1]  Id:    12
+# Query_time: 6.122367  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 1200012
+SET timestamp=1686922178;
+DELETE FROM match_group_member where match_group_id IN (SELECT match_group_id FROM match_group WHERE match_group_name = "test");
+# Time: 2023-06-16T13:29:50.101756Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 3.353996  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922186;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:30:13.750876Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 10.340893  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922203;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:30:22.854196Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 8.482777  Lock_time: 0.000004 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922214;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:30:24.017129Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 8.323600  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922215;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:30:58.244399Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 12.759598  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922245;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:31:00.468546Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 16.397770  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922244;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:31:00.692229Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 16.616605  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922244;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:31:09.160158Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 9.818004  Lock_time: 0.000002 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922259;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:31:10.381411Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 11.030650  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922259;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:31:39.402203Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 3.682858  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922295;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:31:43.525815Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 5.438779  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922298;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:32:33.254924Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 5.041568  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922348;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:32:42.160712Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 6.671696  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922355;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:32:54.756222Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 8.196084  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922366;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:32:57.670197Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 10.090984  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922367;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:09.261370Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 16.947181  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922372;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:10.555736Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 14.375873  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922376;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:10.563802Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 14.344019  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922376;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:10.571212Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 14.388906  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922376;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:17.930886Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 16.421513  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922381;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:18.935641Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 16.452162  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922382;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:30.286213Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 11.026656  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922399;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:33:30.498211Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 17.211265  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922393;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:31.519708Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 10.353861  Lock_time: 0.000003 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922401;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:33:31.520119Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 10.365912  Lock_time: 0.000002 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922401;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:33:33.181685Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 11.086840  Lock_time: 0.000001 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922402;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:33:34.098240Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 10.974049  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922403;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:33:35.426205Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 17.227503  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922398;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:36.512695Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 17.666014  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922398;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:38.786181Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 15.661752  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922403;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:38.799719Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 15.673521  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922403;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:43.963852Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 11.040334  Lock_time: 0.000001 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922412;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:33:48.381618Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 15.175184  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922413;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:48.398221Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 15.455236  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922412;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:48.406229Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 15.069568  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922413;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:52.866180Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 16.411222  Lock_time: 0.000004 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922416;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:53.343226Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 14.676123  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922418;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:53.366194Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 15.387853  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922417;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:53.450223Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 14.647600  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922418;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:53.846195Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 15.295349  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922418;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:55.055404Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 16.267672  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922418;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:33:58.701961Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 10.289485  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922428;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:33:59.851362Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 9.943745  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922429;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:00.355026Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 10.264607  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922430;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:04.855993Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 16.455768  Lock_time: 0.000168 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922428;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:06.410346Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 9.847927  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922436;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:06.714188Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 10.039983  Lock_time: 0.000005 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922436;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:09.269974Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 16.391785  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922432;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:12.550186Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 16.339193  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922436;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:13.792882Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 10.345562  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922443;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:15.218184Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 10.344761  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922444;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:21.402185Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 10.203953  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922451;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:25.581745Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 10.420372  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922455;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:27.154181Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 10.523269  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922456;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:28.568363Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 16.512428  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922452;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:30.786975Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 16.427837  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922454;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:31.270189Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 16.274462  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922454;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:31.578191Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 16.405677  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922455;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:36.774801Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 16.224593  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922460;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:37.942085Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 16.539739  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922461;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:38.734195Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 15.763227  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922462;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:38.958187Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 15.883216  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922463;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:41.364232Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 10.574044  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922470;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:43.207971Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 11.621256  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922471;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:34:44.905338Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 17.903690  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922467;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:46.069809Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 18.912272  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922467;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:48.624781Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 20.046227  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922468;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:34:52.230193Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 20.948001  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922471;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:01.438736Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 24.640483  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922476;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:02.890180Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 24.927527  Lock_time: 0.000004 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922477;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:04.569705Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 25.608749  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922478;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:04.665666Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 25.927190  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922478;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:06.597009Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 23.336307  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922483;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:06.801435Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 21.866442  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922484;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:06.886052Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 20.815604  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922486;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:17.054063Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 14.152231  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922502;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:17.082040Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 24.847297  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922492;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:17.101517Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 28.468436  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922488;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:17.077782Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 35.711997  Lock_time: 0.000001 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922481;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:35:17.060984Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 12.491198  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922504;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:17.116840Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 9.988733  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922507;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:17.128641Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 10.004365  Lock_time: 0.000021 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922507;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:25.294276Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 8.185957  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922517;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:25.503924Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 8.421728  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922517;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:25.668597Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 8.477848  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922517;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:25.679418Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 8.543431  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922517;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:35:51.565696Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 44.439862  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922507;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.568110Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 34.436734  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922517;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.570300Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 34.432938  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922517;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.570927Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 25.891425  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922525;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.573956Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 26.278186  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922525;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.574806Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 25.905685  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922525;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.574955Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 46.401474  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922505;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.575007Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 34.419561  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922517;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.574835Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 50.118793  Lock_time: 0.000004 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922501;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:35:51.575726Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 26.065540  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922525;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:00.901050Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 9.268583  Lock_time: 0.000001 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922551;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:36:00.911698Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 9.307041  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922551;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:36:00.913266Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 9.286388  Lock_time: 0.000002 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922551;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:36:00.911702Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 9.283691  Lock_time: 0.000001 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922551;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:36:00.912821Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 9.305673  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922551;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:36:06.083947Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 14.481067  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922551;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:06.084541Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 14.482355  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922551;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:06.084897Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 14.470453  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922551;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:06.101062Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 14.500356  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922551;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:06.108105Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 14.501004  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922551;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:12.174322Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 11.261274  Lock_time: 0.000002 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922560;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:36:15.738113Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 14.817268  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922560;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:15.743451Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 14.828311  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922560;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:15.743631Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 14.829537  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922560;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:15.758995Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 14.844163  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922560;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:17.104355Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 10.982059  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922566;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = '86a1cdd4-162f-4d8e-ac45-2b84abea355d' AND belong = true);
+# Time: 2023-06-16T13:36:20.994751Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 14.872027  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922566;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:20.995169Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 14.893977  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922566;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:21.461727Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 15.377090  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922566;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:21.478185Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 15.377939  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922566;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:28.851900Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 16.677445  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922572;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:30.984280Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 15.226090  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922575;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:30.990461Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 15.218149  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922575;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:31.002193Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 15.248000  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922575;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:32.406220Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 10.926507  Lock_time: 0.000001 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922581;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:36:33.989955Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 16.882763  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922577;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:37.945688Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 17.247491  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922580;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:38.393615Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 17.393194  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922581;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:40.232682Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 17.318457  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922582;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:41.147507Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 17.265960  Lock_time: 0.000003 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922583;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:45.857630Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 16.980612  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922588;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:46.550665Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 10.817452  Lock_time: 0.000001 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922595;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:36:48.422887Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 17.403781  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922591;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:49.119750Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 16.708511  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922592;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:49.178628Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 16.776398  Lock_time: 0.000004 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922592;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:49.850409Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 11.431675  Lock_time: 0.000003 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922598;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:36:51.048325Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 17.037266  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922594;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:56.619211Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 17.189021  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922599;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:58.450081Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 17.267892  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922601;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:36:59.019558Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 17.085367  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922601;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:02.666187Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 16.782029  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922605;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:03.851604Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 17.282013  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922606;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:06.350203Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 16.311378  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922610;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:06.470205Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 17.278861  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922609;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:06.814463Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 16.955377  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922609;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:07.918121Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 17.167434  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922610;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:08.450186Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 17.376000  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922611;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:12.230182Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 10.805785  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922621;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:37:12.855035Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 10.880833  Lock_time: 0.000004 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922621;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
+# Time: 2023-06-16T13:37:15.318045Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 16.823075  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922618;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:17.099977Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 10.746649  Lock_time: 0.000001 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922626;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:37:17.138180Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 10.667796  Lock_time: 0.000004 Rows_sent: 30  Rows_examined: 3444677
+SET timestamp=1686922626;
+SELECT user_id FROM department_role_member WHERE role_id IN ('0cdddec7-6f5f-4a88-a854-7f24eaec7f70') AND belong = true;
+# Time: 2023-06-16T13:37:19.847811Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    23
+# Query_time: 17.180194  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922622;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:22.873635Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    21
+# Query_time: 16.051884  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922626;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:23.013024Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    18
+# Query_time: 16.166798  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922626;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:25.663619Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    10
+# Query_time: 17.212477  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922628;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:26.042410Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 16.608219  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922629;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:29.600874Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    24
+# Query_time: 17.366230  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922632;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:31.386190Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    17
+# Query_time: 17.007999  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922634;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:32.201943Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    22
+# Query_time: 16.859733  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922635;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:33.048166Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    19
+# Query_time: 15.905227  Lock_time: 0.000001 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922637;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:33.059654Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    20
+# Query_time: 15.957463  Lock_time: 0.000002 Rows_sent: 16  Rows_examined: 6003288
+SET timestamp=1686922637;
+SELECT match_group_id FROM match_group_member WHERE user_id = 'test-user-id';
+# Time: 2023-06-16T13:37:37.020709Z
+# User@Host: mysql[mysql] @  [172.22.0.4]  Id:    25
+# Query_time: 10.963202  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 3444678
+SET timestamp=1686922646;
+SELECT department_name FROM department WHERE department_id = (SELECT department_id FROM department_role_member WHERE user_id = 'test-user-id' AND belong = true);
