@@ -10,13 +10,13 @@ CREATE INDEX dept_role_member_idx1 ON department_role_member (user_id);
 
     -- "SELECT match_group_id FROM match_group_member WHERE user_id = ?",
 
--- CREATE INDEX match_group_idx0 ON match_group (match_group_name);
+CREATE INDEX match_group_idx0 ON match_group (match_group_name);
     -- "SELECT match_group_id, match_group_name, description, status, created_by, created_at FROM match_group WHERE match_group_id = ?";
 
 CREATE INDEX session_idx0 ON `session` (linked_user_id);
 -- "SELECT * FROM session WHERE session_id = ?" <== unecessary?? yes <= primary key
 
--- create index skill_idx0 ON skill (skill_name);
+create index skill_idx0 ON skill (skill_name);
 
 -- CREATE INDEX file_idx0 ON `file` (file_id); <= primary key
 --     -- "SELECT file_name, path FROM file WHERE file_id = ?" 

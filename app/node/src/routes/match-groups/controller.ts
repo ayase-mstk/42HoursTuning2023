@@ -2,7 +2,8 @@ import express from "express";
 import { MatchGroupConfig } from "../../model/types";
 import {
   checkSkillsRegistered,
-  createMatchGroupV2,
+  createMatchGroup,
+  // createMatchGroupV2,
   // createMatchGroupV2,
 } from "./usecase";
 import { getUserByUserId } from "../users/repository";
@@ -40,8 +41,8 @@ matchGroupRouter.post(
       }
       console.log("specified condition is valid");
 
-      // const matchGroupDetail = await createMatchGroup(reqBody);
-      const matchGroupDetail = await createMatchGroupV2(reqBody);
+      const matchGroupDetail = await createMatchGroup(reqBody);
+      // const matchGroupDetail = await createMatchGroupV2(reqBody);
       if (!matchGroupDetail) {
         res.status(500).json({
           message: "マッチグループの作成に失敗しました。",
