@@ -10,7 +10,11 @@ import {
   hasSkillNameRecord,
   insertMatchGroup,
 } from "./repository";
-import { getUserForFilter } from "../users/repository";
+import {
+  getUserForFilter,
+  getUserIdsForFilterV2,
+  getUsersByIds,
+} from "../users/repository";
 
 export const checkSkillsRegistered = async (
   skillNames: string[]
@@ -22,6 +26,28 @@ export const checkSkillsRegistered = async (
   }
 
   return;
+};
+
+export const createMatchGroupV2 = async (
+  matchGroupConfig: MatchGroupConfig
+  // timeout?: number
+): Promise<MatchGroupDetail | undefined> => {
+  const owner = await getUserForFilter(matchGroupConfig.ownerId);
+  const userIds = await getUserIdsForFilterV2(matchGroupConfig, owner);
+  const members = await getUsersByIds(userIds);
+
+  const matchGroupId = uuidv4();
+  await insertMatchGroup({
+    matchGroupId,
+    matchGroupName: matchGroupConfig.matchGroupName,
+    description: matchGroupConfig.description,
+    members,
+    status: "open",
+    createdBy: matchGroupConfig.ownerId,
+    createdAt: new Date(),
+  });
+
+  return await getMatchGroupDetailByMatchGroupId(matchGroupId);
 };
 
 export const createMatchGroup = async (
